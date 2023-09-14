@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enquete</title>
+    <style>
+        body {
+            background-image: url('./image/orgulho-gay.webp'); /* Substitua 'bandeira-lgbt.jpg' pelo nome da sua imagem da bandeira LGBT */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Estilo para o texto em preto */
+        p, label {
+            color: black;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="radio"] {
+            margin: 5px;
+            transform: scale(1.5); /* Aumenta o tamanho dos botões de rádio */
+        }
+
+        #resposta {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p style="color: black;">Quem vai me pagar um babão hoje?</p>
+    <form>
+        <label>
+            <input type="radio" id="roids" name="escolha" value="Roids">
+            <span style="color: black;">Roids</span>
+        </label>
+        <label>
+            <input type="radio" id="hiran" name="escolha" value="Hiran">
+            <span style="color: black;">Hiran</span>
+        </label>
+        <label>
+            <input type="radio" id="pato" name="escolha" value="Pato">
+            <span style="color: black;">Pato</span>
+        </label>
+        <label>
+            <input type="radio" id="jl" name="escolha" value="JL">
+            <span style="color: black;">JL</span>
+        </label>
+        <label>
+            <input type="radio" id="jotinha" name="escolha" value="Jotinha">
+            <span style="color: black;">Jotinha</span>
+        </label>
+        <label>
+            <input type="radio" id="ramos" name="escolha" value="Ramos">
+            <span style="color: black;">Ramos</span>
+        </label>
+        <input type="button" value="Ver Resposta" onclick="mostrarResposta()">
+    </form>
+    <p id="resposta"></p>
+
+    <script>
+        function mostrarResposta() {
+            var escolha = document.querySelector('input[name="escolha"]:checked');
+            if (escolha) {
+                var nomeEscolhido = escolha.value;
+                document.getElementById("resposta").textContent = "A escolha foi: " + nomeEscolhido;
+                
+                // Redireciona para a página correspondente
+                switch (nomeEscolhido) {
+                    case "Roids":
+                        window.location.href = "pagina_safada.html"; // Redireciona para a página com o macaco
+                        break;
+                    case "Hiran":
+                        window.location.href = "pagina_safada.html"; // Redireciona para a página com o macaco
+                        break;
+                    case "Pato":
+                        window.location.href = "pagina_safada.html"; // Redireciona para a página com o macaco
+                        break;
+                    case "JL":
+                        window.location.href = "pagina_safada.html"; // Redireciona para a página com o macaco
+                        break;
+                    case "Jotinha":
+                        window.location.href = "pagina_safada.html"; // Redireciona para a página com o macaco
+                        break;
+                    case "Ramos":
+                        window.location.href = "pagina_safada.html"; // Redireciona para a página com o macaco
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("resposta").textContent = "Nenhuma opção selecionada.";
+            }
+        }
+    </script>
+</body>
+</html>
